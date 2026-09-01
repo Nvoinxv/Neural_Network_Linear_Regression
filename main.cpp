@@ -1,5 +1,7 @@
 #include "open_csv.hpp"
 #include "print_output.hpp"
+#include "mean_squaered_error.hpp"
+#include "linear_layer.hpp"
 #include "preprocessing_data.hpp"
 #include <iostream>
 
