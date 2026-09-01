@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <cmath>
+#include <algrotihm>
 #include "linear_layer.hpp"
 
 class Mean_Squared_Error {
@@ -14,6 +15,8 @@ class Mean_Squared_Error {
 
     int n;
     int m;
+
+    float b;
 
     std::vector<float> y_actual_grad;
     std::vector<float> y_pred_grad;
