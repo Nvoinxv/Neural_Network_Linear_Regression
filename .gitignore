@@ -1,0 +1,65 @@
+# === Hasil Kompilasi (Keluaran Biner) ===
+*.o
+*.obj
+*.out
+*.exe
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+
+# === Direktori Build ===
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# === CMake ===
+CMakeCache.txt
+CMakeFiles/
+CMakeCheckOutputs/
+CMakeScripts/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+
+# === Visual Studio (MSVC) ===
+*.suo
+*.user
+*.sln.docstates
+*.ncb
+*.sdf
+*.opensdf
+*.vcproj.*.user
+*.vcxproj.user
+.vs/
+GeneratedFiles/
+
+# === Visual Studio Code ===
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# === CLion / JetBrains ===
+.idea/
+cmake-build-debug/
+cmake-build-release/
+
+# === Xcode ===
+.xcodeproj/
+*.xcworkspace
+xcuserdata/
+
+# === File Log & Temp ===
+*.log
+*.tmp
+*.bak
+*.swp
+
+# === File Sistem Operasi ===
+.DS_Store
+Thumbs.db
