@@ -10,6 +10,10 @@ add_executable(${PROJECT_NAME}
     src/open_csv.cpp
     src/preprocessing_data.cpp
     src/print_output.cpp
+    src/linear_layer.cpp
+    src/mean_squared_error.cpp
+    src/Neural_Network.cpp
+    src/optimisasi_neuron.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE 
