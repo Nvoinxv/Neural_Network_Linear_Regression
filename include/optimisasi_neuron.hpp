@@ -7,13 +7,15 @@
 
 class Optimisasi_Adam {
     private:
-    Linear();
-    Mean_Squared_Error();
+    Linear linear;
+    Mean_Squared_Error linear;
 
     float beta_1;
     float beta_2;
-
-    std::vector<float> 
+    
+    // Update Bobot dan Bias 
+    std::vector<float> w_grad;
+    float b_grad;
 
     std::vector<float> m;
     std::vector<float> v;
@@ -24,8 +26,12 @@ class Optimisasi_Adam {
     float alpha;
     float epsilon;
     
+    // Ini buat training optimisasi Adam
+    float g_t;
+    float g_t2;
+    
     public:
-    Optimisasi_Adam()
+    Optimisasi_Adam();
 
     std::vector<float> momentum_gradient_m();
     std::vector<float> kekuatan_gradient_v();
