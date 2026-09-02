@@ -2,6 +2,7 @@
 #include "print_output.hpp"
 #include "Neural_Network.hpp"
 #include "preprocessing_data.hpp"
+#include "pembagian_pelatihan.hpp"
 #include <iostream>
 
 int main() {
@@ -26,6 +27,12 @@ int main() {
     data_preproses.standard_scaler(X);
 
     data_preproses.penghapusan_outlier(Y);
+
+    Pembagian_Pelatihan(x, y, ukuran_pelatihan = 0.8);
+
+
+
+    Pembagian_Pelatihan
 
     std::cout << "PROGRAM SELESAI" << std::endl;
     return 0;
