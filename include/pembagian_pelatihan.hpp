@@ -2,10 +2,13 @@
 #define PEMBAGIAN_PELATIHAN_HPP
 
 #include <iostream>
+#include <vector>
 
 struct pembagian_pelatihan_test {
-    std::vector<float> hasil_pelatihan,
-    std::vector<float> hasil_test
+    std::vector<float> hasil_pelatihan_x;
+    std::vector<float> hasil_pelatihan_y;
+    std::vector<float> hasil_test_x;
+    std::vector<float> hasil_test_y;
 };
 
 class Pembagian_Pelatihan {
@@ -19,7 +22,7 @@ class Pembagian_Pelatihan {
     public:
     Pembagian_Pelatihan();
 
-    void fit_pembagian(
+    pembagian_pelatihan_test fit_pembagian(
         std::vector<float>& x,
         std::vector<float>& y,
         float ukuran_test,

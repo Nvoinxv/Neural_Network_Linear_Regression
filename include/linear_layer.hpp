@@ -2,49 +2,50 @@
 #define LINEAR_LAYER_HPP
 
 #include <vector>
-#include <algrotihm>
-#include "mean_squared_error.hpp"
+#include <algorithm>
+#include <iostream>
 
 class Linear {
     private:
-    Mean_Squared_Error mse;
-    std::vector<float> x;
-    std::vector<float> w;
-    std::vector<float> y;
-
+    float w;
     float b;
 
-    std::vector<float> x_grad;
-    std::vector<float> w_grad;
-    std::vector<float> y_grad;
+    float w_grad;
     float b_grad;
 
     public:
-    Linear linear;
+    Linear();
 
-    void forward_layer(const std::vector<float>& x,
-        const std::vector<float>& y
+    std::vector<float> forward_layer(
+        const std::vector<float>& x
     );
 
-    void backward_layer(const std::vector<float>& x,
-    const std::vector<float>& y);
+    void backward_layer(
+        const std::vector<float>& x,
+        const std::vector<float>& y_actual,
+        const std::vector<float>& y_pred
+    );
 
-    const std::vector<float> mendapatkan_x_grad() const {
-        return x_grad;
+    float mendapatkan_w() const {
+        return w;
     }
 
-    const std::vector<float> mendapatkan_y_grad() const {
-        return y_grad;
+    float mendapatkan_b() const {
+        return b;
     }
 
-    const std::vector<float> mendapatkan_w_grad() const {
+    float mendapatkan_w_grad() const {
         return w_grad;
     }
     
-    const float mendapatkan_b_grad() const {
+    float mendapatkan_b_grad() const {
         return b_grad;
     }
-    
+
+    void perbarui_bobot_bias(float w_baru, float b_baru) {
+        w = w_baru;
+        b = b_baru;
+    }
 };
 
 #endif

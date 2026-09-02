@@ -3,46 +3,31 @@
 
 #include <vector>
 #include <cmath>
-#include "linear_layer.hpp"
-#include "mean_squared_error.hpp"
+#include <iostream>
 
 class Optimisasi_Adam {
     private:
-    Linear linear;
-    Mean_Squared_Error linear;
-
     float beta_1;
     float beta_2;
-    
-    // Update Bobot dan Bias 
-    std::vector<float> w_grad;
-    float b_grad;
-
-    std::vector<float> m;
-    std::vector<float> v;
-
-    std::vector<float> w_grad;
-    float b_grad;
-
     float alpha;
     float epsilon;
     
-    // Ini buat training optimisasi Adam
-    float g_t;
-    float g_t2;
+    // Momentum (m) dan kekuatan varians gradient (v) untuk bobot (w) dan bias (b)
+    float m_w;
+    float v_w;
+    float m_b;
+    float v_b;
+
+    int t; // Langkah iterasi waktu (time step)
     
     public:
     Optimisasi_Adam();
 
-    std::vector<float> momentum_gradient_m();
-    std::vector<float> kekuatan_gradient_v();
-
-    float korelasi_bias_m();
-    float korelasi_bias_v();
-
     void update(
-        const std::vector<float>& m,
-        const std::vector<float>& v
+        float& w,
+        float& b,
+        float w_grad,
+        float b_grad
     );
 };
 

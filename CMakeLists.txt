@@ -14,6 +14,7 @@ add_executable(${PROJECT_NAME}
     src/mean_squared_error.cpp
     src/Neural_Network.cpp
     src/optimisasi_neuron.cpp
+    src/pembagian_pelatihan.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE 

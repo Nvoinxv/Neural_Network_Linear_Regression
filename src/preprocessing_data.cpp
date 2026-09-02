@@ -12,17 +12,20 @@ float preprocessing::median(
         return 0.0f;
     }
 
+    std::vector<float> sorted_x = x;
+    std::sort(sorted_x.begin(), sorted_x.end());
+
     float hasil;
 
-    if (x.size() % 2 == 0) {
-        int tengah = x.size() / 2;
+    if (sorted_x.size() % 2 == 0) {
+        int tengah = sorted_x.size() / 2;
 
-        hasil = (x[tengah - 1] + x[tengah]) / 2.0f;
+        hasil = (sorted_x[tengah - 1] + sorted_x[tengah]) / 2.0f;
     } 
     else {
-        int tengah = x.size() / 2;
+        int tengah = sorted_x.size() / 2;
 
-        hasil = x[tengah];
+        hasil = sorted_x[tengah];
     }
 
     return hasil;
