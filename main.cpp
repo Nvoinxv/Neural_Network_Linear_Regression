@@ -17,7 +17,7 @@ int main() {
     std::ifstream file_csv(path_file);
 
     if (!file_csv.is_open()) {
-        file_csv.open("C:/Users/Nvoinvx/Downloads/Neural_Network_Linear_Regression/Linear Regression - Sheet1.csv");
+        file_csv.open("/home/nvoinxv/Documents/Linear_Regression_Neural_Network_CPP/Linear Regression - Sheet1.csv");
         if (!file_csv.is_open()) {
             std::cerr << "Gagal membuka file CSV: " << path_file << std::endl;
             return 1;
