@@ -16,6 +16,10 @@ int main() {
 
     std::vector<float> X;
     std::vector<float> Y;
+
+    std::vector<float> y_pred;
+    std::vector<float> y_actual;
+    
     float nilai;
 
     membaca.membuka_file_csv(file_csv, X, Y);
@@ -29,10 +33,10 @@ int main() {
     data_preproses.penghapusan_outlier(Y);
 
     Pembagian_Pelatihan(x, y, ukuran_pelatihan = 0.8);
+    
+    pelatihan_model(x, y);
 
-
-
-    Pembagian_Pelatihan
+    pembersihan_memori(x, y);
 
     std::cout << "PROGRAM SELESAI" << std::endl;
     return 0;
