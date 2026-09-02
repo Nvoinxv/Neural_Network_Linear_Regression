@@ -20,7 +20,6 @@ class Mean_Squared_Error {
 
     std::vector<float> y_actual_grad;
     std::vector<float> y_pred_grad;
-    std::vector<float> w_grad;
 
     public:
     Mean_Squared_Error();
@@ -32,10 +31,6 @@ class Mean_Squared_Error {
         const std::vector<float>& y_actual,
         const std::vector<float>& y_pred
     )
-
-    const std::vector<float> mendapatkan_w_grad const {
-        return w_grad;
-    }
 
     const std::vector<float> mendapatkan_y_actual_grad const {
         return y_actual_grad;

@@ -2,6 +2,7 @@
 #define OPTIMISASI_NEURON
 
 #include <vector>
+#include <cmath>
 #include "linear_layer.hpp"
 #include "mean_squared_error.hpp"
 
