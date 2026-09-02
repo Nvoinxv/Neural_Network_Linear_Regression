@@ -35,11 +35,17 @@ class latihan_deeplearning {
     float beta_1;
     float beta_2;
 
+    std::vector<float> m;
+    std::vector<float> v;
+
     public:
     latihan_deeplearning();
 
-    void forward_model();
-    void backward_model();
+    void forward_model(const std::vector<float>& x,
+    const std::vector<float>& y);
+
+    void backward_model(const std::vector<float>& x,
+    const std::vector<float>& y);
      
     void pelatihan_model();
 
