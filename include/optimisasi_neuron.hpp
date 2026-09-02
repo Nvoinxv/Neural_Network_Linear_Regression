@@ -44,6 +44,6 @@ class Optimisasi_Adam {
         const std::vector<float>& m,
         const std::vector<float>& v
     );
-}
+};
 
 #endif

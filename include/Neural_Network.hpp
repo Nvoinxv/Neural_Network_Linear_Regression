@@ -4,11 +4,13 @@
 #include "linear_layer.hpp"
 #include "mean_squared_error.hpp"
 #include "optimisasi_neuron.hpp"
+#include <iostream>
 
 class latihan_deeplearning {
     private:
     Linear();
     Mean_Squared_Error();
+    Optimisasi_Adam();
     
     // Ini berguna untuk bagian mencari loss
     std::vector<float> y_actual;
@@ -24,6 +26,14 @@ class latihan_deeplearning {
     std::vector<float> w_grad;
     std::vector<float> y_grad;
     float b_grad;
+    
+    // Variabel dan parameter pada optimisasi update learning ADAM
+    float alpha;
+    float epsilon;
+    float g_t;
+    float g_t2;
+    float beta_1;
+    float beta_2;
 
     public:
     latihan_deeplearning();
@@ -32,6 +42,8 @@ class latihan_deeplearning {
     void backward_model();
      
     void pelatihan_model();
+
+    void pembersihan_memori();
 };
 
 #endif
