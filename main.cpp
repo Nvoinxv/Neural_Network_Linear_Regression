@@ -61,7 +61,7 @@ int main() {
     std::cout << "MEMULAI PELATIHAN MODEL" << std::endl;
     latihan_deeplearning model;
     
-    int jumlah_epoch = 100;
+    int jumlah_epoch = 1000;
     model.pelatihan_model(hasil_pembagian.hasil_pelatihan_x, hasil_pembagian.hasil_pelatihan_y, jumlah_epoch);
 
     // 5. Evaluasi Model pada Data Uji
